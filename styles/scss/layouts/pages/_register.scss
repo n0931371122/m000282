@@ -1,0 +1,16 @@
+#register{
+    .section{
+        .block{
+            .box{
+                min-height: 780px;
+
+            }
+
+        }
+    }
+    @media (max-width:575px){
+        .section .block .box{
+            min-height: 610px;
+        }
+    }
+}

@@ -1,0 +1,241 @@
+#cart-1{
+    .box{
+        padding-bottom: 50px;
+    }
+    .subtotal-th,
+    .discount-price-cell{
+            width: 223px;
+    }
+    .delete-th,
+    .cancel-cell{
+        width: 153px;
+        text-align: center;
+    }
+    .total table tbody tr td:last-child{
+        padding-left: 55px;
+    }
+
+
+    .modal{
+        
+        .modal-dialog{
+            max-width: 965px;
+            .modal-content{
+                max-height: calc(100vh - 80px);
+                border:none;
+                box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
+                border-radius: 25px;
+                padding-bottom: 105px;
+                .header{
+                    padding: 0;
+                    border-bottom: initial;
+                    button{
+                        position: absolute;
+                        right: -42px;
+                        top: -42px;
+                        color:#7EDEEB;
+                        font-size: 50px;
+                        text-shadow: initial;
+                        opacity: 1;
+                    }
+                }
+                .body{
+                    overflow-y: auto;
+                    padding: 45px 32px;
+                  
+                    .radios{
+                        display: inline-block;
+                    }
+                    input[type=text]{
+                        height: 40px;
+                        width: 250px;
+                        background: white;
+                        border: 1px solid rgba(0, 0, 0, 0.35);
+                        border-radius: 5px;
+                        padding: 0 15px;
+                    }
+                    button{
+                        width: 100px;
+                        height: 40px;
+                        border-radius: 5px;
+                        background: #7D6FB2;
+                    }
+                    .table-wrapper{
+                        border-bottom: none;
+                    }
+                    table{
+                        width: 900px;
+                        min-width: 700px;
+                        thead{
+                            tr{
+                                th{
+                                    padding:14px 0;
+                                    &:nth-child(1){
+                                        padding-left: 45px;
+                                    }
+                                }
+                            }
+                        }
+                        tbody{
+                            tr{
+                                td{
+                                    padding: 13px 10px;
+                                    border-bottom:1px solid #D9D6D4;
+                                    &:nth-child(1){
+                                        padding-left: 45px;
+                                    }
+                                    &:nth-child(5){
+                                        color:#D70084;
+                                    }
+                                    button{
+                                        background:#7D6FB2 ;
+                                        width: 65px;
+                                        height: 35px;
+                                        color:white;
+                                        &.used{
+                                            background:#C0C0C0 ;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        button{
+            letter-spacing: 2px;
+            &:not(.used){
+                transition:opacity .3s ;
+                &:hover{
+                    opacity: 0.8; 
+
+                }
+            }
+
+        }
+
+    }
+    @media (max-width:1400px){
+        .subtotal-th,
+        .discount-price-cell{
+                width: 200px;
+        }
+        .cart-table .discounts-body > tr > td.main-discounts > div table tr td.discount-price-cell{
+            width: 200px;
+        }
+        .delete-th, .cancel-cell{
+            width: 100px;
+        }
+    }
+    @media (max-width:1199px){
+       .subtotal-th,
+        .discount-price-cell{
+                width: 150px;
+        }
+        .cart-table .discounts-body > tr > td.main-discounts > div table tr td.discount-price-cell{
+            width: 150px;
+        }
+        .modal .modal-dialog .modal-content .header button{
+            top: 0px;
+            right: 10px;
+        }
+        .total table tbody tr td:last-child{
+            padding-left: 20px;
+        }
+    }
+    @media (max-width:991px){
+        .payType > div:nth-child(1){
+             flex:0 0 110px;
+        }
+
+        .modal .modal-dialog .modal-content .body{
+            padding: 30px 20px;
+        }
+        .modal .modal-dialog .modal-content .body table thead tr th:nth-child(1){
+            padding-left: 20px;
+        }
+        .modal .modal-dialog .modal-content .body table tbody tr td:nth-child(1){
+            padding-left: 20px;
+        }
+        .total table tbody tr td:last-child{
+            padding-left: 0px;
+        }
+    }
+    @media (max-width:767px){
+        .useCoupon,
+        .payType,
+        .all-discount{
+            display: block;
+        }
+        .delete-th, .cancel-cell{
+            width: auto;
+        }
+    }
+    @media (max-width:575px){  
+        .box{
+            padding-bottom: 30px;
+        }
+       .subtotal-th,
+        .discount-price-cell{
+                width: auto;
+        }
+        .payType{
+            > div:nth-child(2) button{
+                height: 40px;
+            } 
+        }
+
+        .modal .modal-dialog .modal-content .body{
+            button{
+                display: block;
+                height: 35px;
+                width: 80px;
+            }
+            input[type=text]{
+                display: block;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 7px;
+                width: calc(100% - 7px);
+                height: 35px;
+            }
+            table{        
+                width: 100%;
+                min-width: initial;
+                tbody tr td{
+                    text-align: left !important;
+                    border-bottom:none;
+                    &:nth-child(1){
+                        padding-left: 0;
+                    }
+                    span.title .inquire{
+                        width: 80px;
+                    }
+                    button{
+                        display: inline-block;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+        .modal .mCSB_horizontal.mCSB_inside > .mCSB_container{
+            width: 100% !important;
+        }
+        .modal .modal-dialog .modal-content .header button{
+            font-size: 24px;
+            top: 15px;
+            right: 15px;
+        }
+        .modal .modal-dialog .modal-content{
+            border-radius: 10px;
+            padding-bottom: 30px;
+        }
+        .modal-dialog-centered{
+            display: block;
+        }
+        .modal .modal-dialog .modal-content .body table tbody tr td{
+            padding: 3px 0;
+        }
+    }
+}

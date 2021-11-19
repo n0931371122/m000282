@@ -1,0 +1,110 @@
+#order{
+    .section{
+        .block{
+            .box{
+                .btns{
+                    a{
+                        margin: 0 12px;
+                        &:nth-child(1){
+                            width: auto;
+                            padding: 0 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        margin-top: -260px;
+    }
+    .modal{
+        .modal-content{
+            border-radius: 25px;
+            border:none;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+            padding: 75px 66px 90px 66px;
+            .header{
+                button{
+                    position: absolute;
+                    right: -40px;
+                    top: -30px;
+                    opacity: 1;
+                    text-shadow: none;
+                    span{
+                        color:#7EDEEB; 
+                        font-size: 34px;
+                        
+                    }
+                }
+            }
+
+        }
+    }
+    @media (min-width:576px){
+        .modal-dialog{
+            max-width: 703px;
+        }
+    }
+
+    @media (max-width:991px){
+        .section .block .box{
+            padding: 30px 20px;
+        }
+    }
+    @media (max-width:767px){
+        .section .block .box {
+            .group .content ul li{
+                display: flex;
+                > span{
+                    &:nth-child(2){
+                       flex:0 0 calc(100% - 85px);
+                       &.mail{
+                        overflow: auto;
+                       }
+                       
+                    }                   
+                }
+            }
+        }
+        .modal .modal-content{
+            padding-top:10px;
+            padding-bottom: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            .header button{
+                position: static;
+            }
+            
+        }  
+    }
+    @media (max-width:575px){
+        .section .block .box{
+            .btns{
+                display: block;
+                a,
+                button{
+                    margin: 0;
+                    width: 100%;
+                    &:nth-child(1){
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+   
+        .modal .modal-content{
+            border-radius: 10px;
+            .header button span{
+                font-size: 24px;
+            }
+            .body{
+                img{
+                    width: 80px;
+                }
+            }
+        }
+        footer{
+            margin-top: -250px;
+        }
+    }
+}

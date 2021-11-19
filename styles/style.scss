@@ -1,0 +1,86 @@
+@charset 'utf-8';
+@import url('fonts/css/fontello.css');
+@import url('scss/plugins/animate.css');
+@import url('scss/plugins/bootstrap.min.css');
+@import url('scss/plugins/mCustomScrollbar.css');
+@import url('scss/plugins/plugins.css');
+@import url('scss/plugins/jquery.fancybox.min.css');
+@import url('scss/plugins/lightgallery.css');
+@import url('scss/plugins/aos.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css');
+// config
+ @import 'scss/layouts/_reset.scss';
+@import 'scss/config/_config.scss';
+@import 'scss/config/_prefixes.scss';
+@import 'scss/config/_bootstrapConfig.scss';
+
+
+// layouts
+
+@import 'scss/layouts/_common.scss';
+@import 'scss/layouts/_layouts.scss';
+@import 'scss/layouts/_keyframes.scss';
+
+// pages
+
+@import 'scss/layouts/pages/_index.scss';
+
+@import 'scss/layouts/pages/_about.scss';
+@import 'scss/layouts/pages/_history.scss';
+
+
+//館內服務介紹
+@import 'scss/layouts/pages/_guide.scss';
+@import 'scss/layouts/pages/_diys.scss';
+
+//最新消息
+@import 'scss/layouts/pages/_news.scss';
+@import 'scss/layouts/pages/_new.scss';
+
+//contact
+@import 'scss/layouts/pages/_contact.scss';
+@import 'scss/layouts/pages/_contact-ok.scss';
+
+//qa
+@import 'scss/layouts/pages/_qa.scss';
+
+
+
+//terms、privacy
+@import 'scss/layouts/pages/_terms.scss';
+//sitemap
+@import 'scss/layouts/pages/_sitemap.scss';
+
+//會員專區
+@import 'scss/layouts/pages/_login.scss';
+@import 'scss/layouts/pages/_register.scss';
+@import 'scss/layouts/pages/_ok.scss';
+@import 'scss/layouts/pages/_editor.scss';
+
+@import 'scss/layouts/pages/_orders.scss';
+@import 'scss/layouts/pages/_order.scss';
+@import 'scss/layouts/pages/_invoice.scss'; 
+@import 'scss/layouts/pages/_discount-slip.scss'; 
+@import 'scss/layouts/pages/_return.scss'; 
+@import 'scss/layouts/pages/_service.scss'; 
+@import 'scss/layouts/pages/_return-record.scss'; 
+
+//購物車
+@import 'scss/layouts/pages/_cart-1.scss'; 
+@import 'scss/layouts/pages/_cart-2.scss'; 
+@import 'scss/layouts/pages/_cart-3.scss'; 
+//參觀資訊
+@import 'scss/layouts/pages/_visit.scss';
+@import 'scss/layouts/pages/_environment.scss'; 
+@import 'scss/layouts/pages/_rule.scss';
+
+@import 'scss/layouts/pages/_periphery.scss';
+@import 'scss/layouts/pages/_Floor1.scss';
+@import 'scss/layouts/pages/_Floor2.scss';
+@import 'scss/layouts/pages/_Floor3.scss';
+
+
+//reservation
+@import 'scss/layouts/pages/_reservation.scss';
+@import 'scss/layouts/pages/_time.scss';
+

@@ -1,0 +1,211 @@
+#return-record{
+    .section{
+        .block{
+            .box{
+                .process{
+                    border:1px solid #BBBBBB;
+                    .head{
+                        border-top: 2px solid #174A79;
+                        background: #EAEFF3;      
+                        padding: 15.5px 20px;   
+                    }
+                    .body{
+                        padding-top: 47px;
+                        padding-bottom: 36px;
+                        >ul{
+                            display: flex;
+                            margin: auto;
+                            width: 1040px;
+                            justify-content: space-between;
+                            >li{
+                               
+                                width: 200px;
+                                text-align: center;
+                                position: relative;
+                                &::after{
+                                    content:"";
+                                    display: block;
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 25px;
+                                    width: 278px;
+                                    height: 2px;
+                                    
+                                }
+                                &:nth-child(1),
+                                &:nth-child(2){
+                                    &::after{
+                                        background: #4CD0E0;
+                                    }
+                                }
+                                &:nth-child(3){
+                                    &::after{
+                                        background: #E4E4E4;
+                                    }
+                                }
+                                &:nth-child(4){
+                                    img{
+                                        margin-left: -10px;
+                                    }
+                                }   
+                                img{
+                                    z-index: 1;
+                                    position: relative;
+                                }
+                                .title{
+                                    letter-spacing: 2px;
+                                }
+                                .date{
+                                    color:rgba(0,0,0,0.53);
+                                }
+                                ul{
+                                    border-top:1px solid #BBBBBB;
+                                    text-align: center;
+                                    li{
+                                        margin-bottom: 3px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .total{
+                    border-bottom:1px solid;
+                }
+            }
+        }
+    }
+    @media (max-width:1199px){
+        .section .block .box .process .body > ul{
+            width: 800px;
+            > li::after{
+                width: 200px;
+            }
+        }
+
+    }
+    @media (max-width:991px){
+        .section .block .box{
+            padding: 30px 20px;
+            .process .body > ul{        
+                width: 650px;
+                > li::after{
+                    width: 150px;
+                }
+            }
+        }
+    }
+    @media (max-width:767px){
+        .section .block .box{
+            .process .body > ul{       
+                padding: 0 10px;
+                width: auto;
+                display: block;
+                > li{
+                    &::after{          
+                        // width: 3px;
+                        // height: 30px;
+                        // top:calc(100% + 10px);
+                        // transform: translateX(-50%);
+                        display: none;
+                    }
+                    &:nth-child(4) img{
+                        margin: 0;
+                    }
+                    span{
+                        text-align: left;
+                        display: block;
+                    }
+                }
+            }
+        }
+        .section .block .box .process .body > ul > li{
+            padding-bottom: 10px;
+            width: auto;
+            &:not(:last-child){
+                border-bottom:1px solid black;
+            }
+            .title{
+                margin-top: 10px !important;
+            }
+            &::after{
+                height: 20px;
+            }
+            img{
+                width: 30px;
+                float: left;
+                margin-right: 15px !important;
+            }
+            ul{
+                text-align: left;
+                margin-left: 45px;
+            }          
+        }
+    }
+    @media (max-width:575px){
+        .section .block .box{
+            .info > div:nth-child(1){
+               flex-wrap: wrap;
+                >span{
+                    flex:0 0 100%;
+                }
+                .invoice-link{
+                    margin-left: 0;
+                    
+                }
+            }
+            .process{
+                .head{
+                    padding: 10px;
+                }
+                .body{
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    > ul > li{
+                        .date{
+                            margin-left: 29px;
+                        }
+                        img{
+                            margin-top: 2px !important;
+                            width: 20px;
+                            margin-right: 8px !important;
+                        }
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                        ul{
+                            margin-left: 27px;
+                        }
+                    }
+                }
+            }
+
+            .groups .group{
+                padding: 15px 0 5px 0;
+                .title{
+                    margin-bottom: 10px;
+                }
+                .content{
+                    .text-gray{
+                        color:black;
+                    }
+                    ul li > span:nth-child(1){
+                        flex:0 0 85px;
+                    }
+                }
+            }
+            .btns{
+                display: block;
+                a,
+                button{
+                    margin: 0;
+                    width: 100%;
+                    &:nth-child(1){
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }  
+}

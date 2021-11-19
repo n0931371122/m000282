@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 43 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g>
+        <clipPath id="_clip1">
+            <path d="M33.158,-39.72L79.193,205.805L-255.89,278.783L-301.925,33.258L33.158,-39.72Z"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g>
+                <clipPath id="_clip2">
+                    <path d="M3.471,11.207C2.819,11.284 -0.652,5.757 0.108,5.407C2.161,4.458 3.785,2.778 5.795,1.758C7.915,0.682 10.376,0.656 12.602,0.338C17.489,-0.357 22.559,0.194 27.44,0.455C29.969,0.589 32.521,1.221 34.745,2.439C36.807,3.566 38.984,4.516 40.789,6.061C42.651,7.633 42.435,9.151 41.214,11.132C40.071,12.983 38.419,14.633 36.435,15.5C34.067,16.534 31.251,16.455 28.737,16.444C26.08,16.433 23.432,16.22 20.796,15.953C16.091,15.476 10.967,14.312 6.55,12.631C5.711,12.313 4.357,11.108 3.471,11.207Z"/>
+                </clipPath>
+                <g clip-path="url(#_clip2)">
+                    <g id="_Image3_" serif:id="_Image3" transform="matrix(0.980441,1.08851e-16,5.37146e-17,0.967637,0,0)">
+                        <clipPath id="_clip3">
+                            <rect x="0" y="0" width="43" height="17"/>
+                        </clipPath>
+                        <g clip-path="url(#_clip3)">
+                            <g transform="matrix(1.01995,-1.14736e-16,-5.66185e-17,1.03345,0,0)">
+                                <use xlink:href="#_Image4" x="0" y="0" width="42.159px" height="16.45px" transform="matrix(0.980441,0,0,0.96762,0,0)"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <image id="_Image4" width="43px" height="17px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAARCAYAAABEvFULAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAk0lEQVRIidWWyxGAIAwFX9Qy6IVKrI5KbMWxDUdPOBHDBMcPYU8MvMNyyIegMC3jpmWe4F2g0qwY/FowhyZ+eawlyslJH5cWJFNSaQJsika4MFkW5XgXqBlZAGtX2+AGfUuy9guMY7p1pZz6mHVhkxNMwrtA2VlsSToOhkELANXF53goXs84f8mLu8EbvP0BafPaAQ4mOf3poL8pAAAAAElFTkSuQmCC"/>
+    </defs>
+</svg>

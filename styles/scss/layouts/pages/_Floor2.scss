@@ -1,0 +1,307 @@
+#Floor2{ 
+    footer{
+        margin-top: -87px; 
+    }
+
+    .dec-section{
+        .bg{
+            padding-top: 135px;
+            left: 0;
+            transform: none;
+        }
+
+    }
+
+    .section{
+        .block{
+            .map-wrapper{ 
+                ul.groups{
+                    li{
+                        &.group-1{
+                            left: 14%;
+                            top: 50.5%;
+                            .circle-group{
+                                .flag{
+                                    left: -38px; 
+                                    top: 6%;
+                                    width: 50px;
+                                }
+                                .item-group{
+                                    width: 282px;
+                                    height: 201.4px;
+                                    top: 41%;
+                                    left: 62%;
+
+                                }                           
+                            }
+
+                        }   
+                        &.group-2{
+                            left: 46.5%;
+                            top: 47%;
+                            .circle-group{
+                                .circle{
+                                    width: 194px; 
+                                }
+                                .flag{
+                                    left: -85px;
+                                    top: -4%;
+                                    width: 60px;
+                                    animation-delay: .3s;
+                                    animation-duration: 2.5s;
+                                }
+                                .item-group{
+                                    top: 55%;
+                                    left: 69%;
+                                    width: 270px;
+                                    height: 223.7px;
+                                }                           
+                            }
+
+                        } 
+                        &.group-3{
+                            left: 70.5%;
+                            top: 41.8%;
+                            .circle-group{
+                                .circle{
+                                    width: 257px;
+                                }
+                                .flag{
+                                    left: -65px;
+                                    top: -4%;
+                                    width: 60px;
+                                    animation-delay: .6s;
+                                    animation-duration: 3.5s;
+                                }
+                                .item-group{
+                                    top:59%;
+                                    left: 53%;
+                                    width: 280px;
+                                    height: 214.2px;
+                                }
+                            }
+                            .box{
+                                left: -145%;
+                                &::before{
+                                    transform: rotate(180deg);
+                                    right: -14px;
+                                    left: auto;
+                                }
+                            }
+                        }                          
+                    }
+
+                }
+            }
+        .animals{
+            width: 1920px;
+            position: absolute;
+            left: 0%;
+            
+            top: 249px;
+            height: 200px;
+            img{
+                position: absolute;
+                left: 43%;
+            }
+        }
+
+        }
+        >ul:not(.links){
+            li{
+               
+                &:nth-child(1){
+                    .img-wrapper{
+                        .icon{
+                            width: 24.8px;
+                        }
+                    }
+                }    
+                &:nth-child(2){
+                    .img-wrapper{
+                        .icon{
+                            width: 19px;
+                        }
+                    }
+                }
+                &:nth-child(3){
+                    .img-wrapper{
+                        .icon{
+                            width: 27px;
+                        }
+                    }
+                }  
+            }
+        }
+    }
+    @media (max-width:1800px){
+        .section .block .animals{
+            top: 139px;
+        }
+    }
+    @media (max-width:1600px){
+        .dec-section .dragonfly{
+            width: 40.8px;
+        }
+        .section{
+            > ul:not(.links) li{
+                &:nth-child(1) .img-wrapper .icon{
+                    width: 19.8px;
+                }
+                &:nth-child(2) .img-wrapper .icon{
+                    width: 15.2px;
+                }
+                &:nth-child(3) .img-wrapper .icon{
+                    width: 21.6px;
+                }
+            }
+            .block .map-wrapper{          
+                ul.groups li{          
+                    &.group-1 .circle-group{
+                        .circle{
+                            width: 200px;
+                        }
+                        .item-group{
+                            width: 225.6px;
+                            height: 161.1px;
+                        }
+                        .flag{
+                            width: 40px;
+                        }         
+                    }
+                    &.group-2 .circle-group{
+                        .circle{
+                            width: 155.2px;
+                        }
+                        .item-group{
+                            width: 252.8px;
+                            height: 179px;
+                        }
+                        .flag{
+                            width: 48px;
+                            left: -70px;
+                        }                   
+                    }
+                    &.group-3 .circle-group{
+                        .item-group{
+                            width: 261.6px;
+                            height: 171.4px;
+                        }
+                        .circle{
+                            width: 205.6px;
+                        }
+                        .flag{
+                            width: 48px;
+                            left: -25%;
+                        }    
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:1400px){
+        .section .block{
+            .animals{
+                top: 175px;
+            }
+            .map-wrapper{
+                ul.groups li{
+                    &.group-1{
+                        top: 38%;
+                        left: 10%;
+                    }
+                    &.group-2{
+                        left: 38%;
+                        top: 58%;
+                    }
+                    &.group-3{
+                        left: 63%;
+                        top: 31%;
+
+                    }            
+                }
+            }
+        }
+    }
+    @media (max-width:1199px){
+        footer{
+            margin-top: 0;
+        }
+        .section .block{
+            .animals{
+                top: 243px;
+            }
+            .map-wrapper{                
+                ul.groups li{
+                    &.group-1{
+                        .circle-group{
+                            .circle{
+                                width: 180px;
+                            }
+                            .item-group{
+                                width: 198px;
+                                height: 141.4px;
+                            }
+                            .flag{
+                                width: 36px;
+                            }
+                        }
+                    }
+                    &.group-2{
+                        left: 43%;
+                        .circle-group{
+                            .circle{
+                                width: 135.8px;
+                            }
+                            .item-group{
+                                width: 222px;
+                                height: 157.5px;
+                            }
+                            .flag{
+                                width: 42px;
+                            }
+                        }
+                    }
+                    &.group-3{
+                        left: 69%;
+                        .circle-group{
+                            .circle{
+                                width: 180px;
+                            }
+                            .item-group{
+                                width: 230px;
+                                height: 150px;
+                            }
+                            .flag{
+                                width: 42px;
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    }
+    @media (max-width:767px){
+        .dec-section{
+            .bg{
+                background: url(images/environment/2f-bg.jpg) center no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+    @media (max-width:575px){
+        .section{
+            > ul:not(.links) li{
+                &:nth-child(1) .img-wrapper .icon{
+                    width: 17.05px;
+                }
+                &:nth-child(2) .img-wrapper .icon{
+                    width: 13.06px;
+                }
+                &:nth-child(3) .img-wrapper .icon{
+                    width: 18.56px;
+                }
+            }
+        }
+    }
+}

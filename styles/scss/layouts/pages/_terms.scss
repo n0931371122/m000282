@@ -1,0 +1,86 @@
+#terms,
+#privacy{
+    .dec-section{
+        .clouds{    
+            .cloud-1{
+                position: absolute;
+                width: 15%;
+                top: 203px;
+                left: 2%;
+            }
+            .cloud-2{
+                position: absolute;
+                width: 8%;
+                top: 150px;
+                left: 23%;    
+            }
+            .cloud-3{
+                position: absolute;
+                width: 15%;
+                top: 190px;
+                left: 75%;
+            } 
+            .cloud-4{
+                position: absolute;
+                width: 12.8%;
+                top: 190px;
+                left: 83%;    
+            }
+        }
+        .birds{
+            .bird-1{
+                position: absolute;
+                top: 343px;
+                left: 1652px;
+                width: 108px;
+            }
+            .bird-2{
+                position: absolute;
+                top: 620px;
+                left: 140px;
+                width: 108px;
+            }
+            .bird-3{
+                position: absolute;
+                top: 950px;
+                left: 1700px;
+                width: 163px;
+            }
+        }
+    }
+    footer{
+        margin-top: -100px;
+    }
+    @media (max-width:575px){
+        .dec-section{
+            .clouds{
+                .cloud-1{
+                    top: 75px;
+                }
+                .cloud-2{
+                    left: 10%;
+                }
+                .cloud-3{
+                    top: 87px;
+                }
+                .cloud-4{
+                    top: 90px;
+                }
+            }
+            .birds{
+                .bird-1{
+                    left: 70%;
+                    top: 160px;
+                    width: 60px;
+                }
+                .bird-2,
+                .bird-3{
+                    display: none;
+                }
+            }
+        } 
+    footer{
+        margin-top: 0px;
+    }
+    }
+}

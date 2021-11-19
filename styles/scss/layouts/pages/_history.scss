@@ -1,0 +1,284 @@
+#history{
+    footer{
+        margin-top: -320px;
+    }
+    #header #fix{
+            ul li{
+                a .bg{
+                    transform: translateY(-28%);
+                }
+                >div .bg{
+                    transform: translateY(-28%);
+                }
+            }
+    }
+    .dec-section{
+        .leafs{
+            position: absolute;
+            top: 110px;
+            .left{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 400px;
+                z-index: 1;
+                transform-origin: 0% 50%;
+                >div:nth-child(1){               
+                    >img{
+                        
+                        position: absolute;
+                        mix-blend-mode:multiply ;
+                        &:nth-child(1){
+                            width: 400px;
+                            left: -105px;
+                        }
+                        &:nth-child(2){
+                            width: 388px;
+                            top: 180px;
+                            left: -74px;
+                        }
+                        &:nth-child(3){
+                            width: 110px;
+                            top: 151px;
+                            left: -51px;
+                        }
+                    }
+                }
+                .dec{
+                    width: 100%;
+                    position: absolute;
+                    top:200px;
+                    .small-leaf{
+                        width: 70px;
+                        position: absolute;
+                        z-index: 1;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+            .right{
+                position: absolute;
+                top: 35px;
+                left: 1550px;
+                width: 470px;
+                z-index: 2;
+                transform-origin: 100% 50%;
+                >div:nth-child(1){               
+                    >img{
+                        
+                        position: absolute;
+                        mix-blend-mode:multiply ;
+                        &:nth-child(1){
+                            width: 390px;
+                            right: 72px;
+                            opacity: 0.6;
+                        }
+                        &:nth-child(2){
+                            width: 326px;
+                            top: 110px;
+                            right:20px;
+                        }
+                        &:nth-child(3){
+                            width: 131px;
+                            top: 197px;
+                            right: 95px;
+                        }
+                    }
+                }
+                .dec{
+                    width: 100%;
+                    position: relative;
+                    top:200px;
+                    .small-leaf{
+                        width: 40px;
+                        position: absolute;
+                        z-index: 1;
+
+                        top: 0;
+                        left: 0;
+                    }
+                    img{
+                        transform: rotateZ(10deg);
+                        position: absolute;
+                    }
+                }
+            }
+        }
+        >img{
+            position: absolute;
+        }
+        .butterfly{
+            width: 194px;
+            top: 300px;
+            left: 1500px;
+        }
+
+        .dragonfly{
+            width: 70px;
+            top: 250px;
+            left: 420px;      
+        }
+    }
+    .section{
+        padding-bottom: 560px;
+        .block{
+            .max1400{
+                position: relative;
+                &::before{
+                    content:"";
+                    display: block;
+                    height: 240px;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: white;
+                    width: 30%;
+                    z-index: 1;
+                }
+                .airplane{
+                    position: absolute;
+                    left: 48.2%;
+                    transform: translateX(-50%);
+                    z-index: 1;
+                }
+                ul{
+                    padding-top: 55px;
+                    background: url(images/about/curve.png) center top 54px repeat-y;
+                    position: relative;
+
+                    &::after{
+                        content:"";
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        background: linear-gradient(rgba(255,255,255,0) 50%,rgba(255,255,255,1));
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    li{
+                        z-index: 1;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        &:nth-child(odd){
+                            .img-box{
+                                order:1;
+                            }
+                            .text-box{
+                                order:2;
+                            }
+                        }
+                        &:nth-child(even){
+                            
+                            .img-box{
+                                order:2;
+                            }
+                            .text-box{
+                                order:1;
+                            }
+                        }
+                        &.active{
+                            .text-box{
+                                .year{
+                                    color:#9968BF;
+                                }   
+                            }
+                        }
+                        &:nth-child(1){
+                            background: url(images/about/pinky-dot.png) left 47.5% center no-repeat;
+                        }
+                        .text-box{
+                            flex:0 0 43%;
+                            .info{
+                                color:#4C4C4C;
+                                opacity: 0.7;
+                                line-height: 1.8em;
+                                letter-spacing: 1px;
+                                max-height: 300px;
+                           
+                            }
+                        }
+                        .img-box{
+                            flex:0 0 53%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:1400px){
+        .section .block .max1400 ul li:nth-child(1){
+             background: url(images/about/pinky-dot.png) left 47% center no-repeat;
+        }
+        .dec-section .dragonfly{
+            top: 200px;
+            left: 200px;
+        }
+    }
+    @media (max-width:1199px){
+        .section .block .max1400{
+            &::before{
+                display: none;
+            }
+            ul{
+                background: none;
+                li:nth-child(1){
+                    background: none;
+                }
+            }
+            
+        }
+    }
+    @media (max-width:991px) {
+        .dec-section .dragonfly{
+            width: 50px;
+            top: 200px;
+             left: 100px;
+        }
+    } 
+    @media (max-width:767px){
+        .section .block .max1400{
+            .airplane{
+                width: 300px;
+            }
+            ul li{          
+                display: block;
+                margin-bottom: 20px;
+                .text-box{
+                    text-align: center;
+                    .info{
+                        max-height: initial;
+                    }
+                    
+                }
+            }
+        }
+    }
+    @media (max-width:575px){
+        .section{
+            padding-bottom: 300px;
+            .dec{
+                width: 1000px;
+                left: 100%;
+            }
+        }
+        footer{
+            margin-top: -180px;
+        }
+        .dec-section{
+            .dragonfly{
+                width: 30px;
+                left: 5%;
+                top: 200px;
+            }
+        }
+       
+    }
+}

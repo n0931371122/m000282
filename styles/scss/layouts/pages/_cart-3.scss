@@ -1,0 +1,231 @@
+#cart-3{
+    .bank-data{
+        border-top: 1px solid;  
+        border-bottom: 1px solid;     
+        >div{
+            &:nth-child(1){
+                display: flex;
+                 align-items: center;
+                .left{
+                    padding-left: 35px;
+                    flex:0 0 69.5%;
+                    color:rgba(0,0,0,0.4);
+                    ul{
+                        li{
+                            position: relative;
+                            padding-left: 20px;
+                            &::before{
+                                content:"";
+                                display: block;
+                                position: absolute;
+                                left: 0;
+                                top: 12px;
+                                width: 2px;
+                                height: 2px;
+                                background:#9A9A9A ;
+                            }
+                        }
+                    }
+                }
+                .right{
+                    border: 10px solid transparent;
+                    flex:0 0 30.5%;
+                    //border-left:2px dotted #7D6FB2;
+                    border-image:url(images/cart/dotted.png) 32% round; 
+                    //background: url(images/cart/dotted.jpg);
+                    ul{
+                        li{
+                            margin-bottom: 12px;
+                            span{
+                                &:nth-child(1){
+
+                                }
+                                &:nth-child(2){
+                                    color:rgba(0, 0, 0, 0.37);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(2){
+                display: table;
+                margin: auto;
+                ul{
+                    display: flex;
+                    li{
+                        margin: 0 5px;
+                        a{
+                            
+                            border:1px solid #7D6FB2;
+                            color:#7D6FB2;
+                            width: 150px;
+                            height: 50px;
+                            color:#7D6FB2;
+                            border-radius: 10px;
+                            transition:background .3s,color .3s;
+                            &:hover{
+                                background:#7D6FB2 ;
+                                color:white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        >div{
+            &:nth-child(1){
+                display: flex;
+                align-items: center;
+                >span{
+                    >span{
+                        &:nth-child(2){
+                            letter-spacing: 1px;
+                            margin-left: -8px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2){
+                >span{
+                    >span{
+                        &:nth-child(2){
+                            margin-left: -8px;
+                        }
+                    }
+                }
+            }
+            .invoice-link{
+                height: 41px;
+                width: 130px;
+                border-radius: 5px;
+                border:1px solid rgba(0,0,0,0.27);
+                transition:background .3s,border .3s;
+                &:hover{
+                    background: #EAEFF3;
+                    border:1px solid #EAEFF3;
+                }
+            } 
+        }
+    }
+    .orderGroups{
+        letter-spacing: 1.6px;
+        color: rgba(0, 0, 0, 0.85);
+    }
+
+    @media (max-width:1600px){
+        .dec-section .clouds .cloud-1{
+            top: 300px;
+        }
+        .bank-data > div:nth-child(1) .left{
+            padding-left: 0;
+        }
+    }
+    @media (max-width:1400px){
+        .bank-data > div:nth-child(1){
+            .left{
+                flex:0 0 60%;
+            }
+            .right{
+                flex:0 0 40%;
+            }
+        }
+    }
+    @media (max-width:1199px){
+        .info{
+            display: block;
+        }
+    }
+    @media (max-width:991px){
+        .bank-data > div:nth-child(1){
+            .left{
+                flex:0 0 50%;
+            }
+            .right{
+                flex:0 0 50%;
+            }
+        }
+    }
+    @media (max-width:767px){
+        .bank-data > div:nth-child(1){
+            display: block;
+            .right{
+                border:none;
+            }
+        }
+        .bank-data > div:nth-child(1) .left ul li{
+            padding-left: 10px;
+        }
+        .info{
+            display: block;
+            > div:nth-child(2){
+                >span{
+                    display: block;
+                }
+            }
+        }
+        .orderGroups .content ul li{
+            display: flex;
+            > span:nth-child(2).mail{
+                overflow: auto;
+            }
+            
+        }
+    }
+    @media (max-width:575px){
+        .bank-data > div:nth-child(1) .right ul li{
+            margin-bottom: 8px;
+            >span:nth-child(1){
+                width: 84px;
+            }
+        }
+        .bank-data > div:nth-child(2){
+            margin: 0;
+            ul{
+                display: block;
+                li{
+                    margin-bottom: 10px;
+                    a{
+                        width: 120px;
+                        height: 40px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+        }
+        .info > div{
+            .invoice-link{
+                height: 35px;
+                width: 100px;
+                margin-left: auto;
+                margin-right: 0;
+            }
+            &:nth-child(1){
+                >span{
+                    >span{
+                        display: block;
+                        &:nth-child(2){
+                            margin-left: 0;
+                        } 
+                    }
+                }
+            }
+            &:nth-child(2) > span{                
+                span{
+                    display: block;
+                    &:nth-child(2){
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+    }
+}

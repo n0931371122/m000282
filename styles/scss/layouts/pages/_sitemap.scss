@@ -1,0 +1,244 @@
+#sitemap{
+    .section{
+        position: relative;
+        .block{
+            >ul{
+                margin-left: -37px;
+                margin-right: -37px;  
+                >li{
+                    padding-right: 37px;
+                    padding-left: 37px;
+                    margin-bottom: 70px;
+                    h2{
+                        background: url("images/sitemap/btn.png") center no-repeat;
+                        background-size: cover;
+                        width: 220px;
+                        height: 60px;
+                        color:white;
+                        margin-bottom: 25px;
+                        letter-spacing: 2px;
+                    }
+                    >ul{
+                        max-width: 220px;
+                        margin: auto;
+                        >li{  
+                            width: 183px;
+                            margin: auto;      
+                            .title{
+                                display: block;
+                                background: url(images/sitemap/line.png) bottom no-repeat;
+                                background-size: contain;
+                                padding: 11px 0 11px 30px;
+                                position: relative;
+                                left: 2px;
+                                color:rgba(0,0,0,0.85);
+                                &::before{
+                                    content: "";
+                                    display: block;
+                                    position: absolute;
+                                    width: 9px;
+                                    height: 9px;
+                                    border-radius: 50%;
+                                    background: #174A79;
+                                    border:2px solid white;
+                                    top: 21px;
+                                    left: 11px;
+                                    opacity: 0.5;
+                                    transition:opacity .3s,border .3s;
+                                }
+                            }
+                            a.title:hover{
+                                color:rgb(0,0,0);
+                                &::before{
+                                    opacity: 1;
+                                    border:2px solid #174A79;
+                                }
+                            }
+                            >ul{
+                                padding-left: 17px;
+                                margin-top: 10px;
+                                margin-bottom: 22px;
+                                >li{
+                                    margin-bottom: 10px;
+                                    a{
+                                        position: relative;
+                                        color: rgba(0,0,0,0.55);
+                                        padding-left: 25px;
+                                        letter-spacing: 2px;
+                                        &::before{
+                                            content: "";
+                                            display: block;
+                                            position: absolute;
+                                            width: 5px;
+                                            height: 1px;
+                                            background: rgba(0,0,0,0.55);
+                                            top: 16px;
+                                            left: 11px; 
+                                        }
+                                        &:hover{
+                                            color:black;
+                                            &::before{
+                                                background: black;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .dec-section{
+        .clouds{    
+            .cloud-1{
+                position: absolute;
+                width: 15%;
+                top: 203px;
+                left: -6%;
+            }
+            .cloud-2{
+                position: absolute;
+                width: 8%;
+                top: 150px;
+                left: 23%;    
+            }
+            .cloud-3{
+                position: absolute;
+                width: 15%;
+                top: 190px;
+                left: 75%;
+            } 
+            .cloud-4{
+                position: absolute;
+                width: 12.8%;
+                top: 190px;
+                left: 83%;    
+            }
+        }
+        .birds{
+            .bird-1{
+                position: absolute;
+                display: none;
+            }
+            .bird-2{
+                position: absolute;
+                top: 470px;
+                left: 263px;
+                width: 108px;
+            }
+            .bird-3{
+                position: absolute;
+                display: none;
+            }
+        }
+    }
+    footer{
+        margin-top: -200px;
+    }
+    @media (max-width:1600px){
+        footer{
+            margin-top: -100px;
+        }    
+    }
+    @media (max-width:991px){
+        .section .block > ul{
+            margin-left: -20px;
+            margin-right: -20px;
+            > li{
+                padding-right: 20px;
+                padding-left: 20px;
+                h2{
+                    width: 100%;
+                    height: 48px;
+                    border-radius: 25px;
+                }
+                >ul{
+                    max-width:auto;
+                }
+            }
+
+        }
+    }
+    @media (max-width:575px){
+        .section .block > ul{
+            max-width: 350px;
+            margin: auto;
+            >li{
+                margin-bottom: 20px;
+                h2{
+                    margin-bottom: 5px;
+                    height: 40px;
+                }
+                > ul > li{
+                    &.long{
+                        width: 130px;
+                    }
+                    .title{
+                        padding: 7px 0 7px 25px;
+                        &::before{
+                            top: 14px;
+                        }
+                        
+                    }
+                    ul{
+                        margin-bottom: 10px;
+                        > li{
+                            margin-bottom: 5px;
+                            a::before{
+                                top: 11px;  
+                            }
+                                
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .dec-section{
+            .clouds{
+                .cloud-1{
+                    width: 20%;
+                    top: 255px;
+                }
+                .cloud-2{
+                    left: 70%;
+                    width: 20%;
+                    top: 500px;
+                }
+                .cloud-3{
+                    top: 800px;
+                    width: 20%;
+                    left: 1%;
+                }
+                .cloud-4{
+                    top: 1200px;
+                    width: 20%;
+                    left: 70%;
+                }
+            }
+            .birds{
+                .bird-1{
+                    left: 55%;
+                    top: 80px;
+                    width: 100px;
+                    display: block;
+                }
+                .bird-2{
+                    top: 500px;
+                    left: 5%;
+                }
+                .bird-3{
+                    display: block;
+                    top: 1640px;
+                    width: 150px;
+                    left: 50%;
+                }
+            }
+        } 
+        footer{
+            margin-top: 0px;
+        }
+    }
+}

@@ -1,0 +1,263 @@
+#Floor3{ 
+    footer{
+        margin-top: -87px; 
+    }
+    .dec-section{
+        .bg{
+            padding-top: 155px;
+            left: 0;
+            transform: none;
+        }
+        .clouds{
+            .cloud-3{
+                top: 545px;
+            }
+            .cloud-4{
+                top: 545px;
+            }
+        }
+    }
+
+    .section{
+        .block{
+            .map-wrapper{ 
+                .map{
+                    position: relative;
+                    .people{
+                        position: absolute;
+                        top: 69.5%;
+                        left: 26.3%;
+                        z-index: 1;
+                        width: 15.6%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+                ul.groups{
+                    li{
+                        &.group-1{ 
+                            left: 12.5%;
+                            top: 41.8%;
+                            .circle-group{
+                                .circle{
+                                    width: 251px;
+                                }
+                                .flag{
+                                    left: -42px;
+                                    top: -9%;
+                                    width: 60px;
+                                }
+                                .item-group{
+                                    width: 241.1px;
+                                    height: 200.3px;
+                                    top: 21%;
+                                    left: 50%;
+
+                                }                           
+                            }
+
+                        }   
+                        &.group-2{
+                            left: 37%;
+                            top: 53.5%;
+                            .circle-group{
+                                .circle{
+                                    width: 215px;
+                                }
+                                .flag{
+                                    left: 109%;
+                                    top: -12%;
+                                    width: 60px;
+                                    animation-delay: .3s;
+                                    animation-duration: 2.5s;
+                                }
+                                .item-group{
+                                    top: 42%;
+                                    left: 58%;
+                                    width: 225px;
+                                }                           
+                            }
+
+                        } 
+                         
+                    }
+
+                }
+            }
+
+        }
+        .animals{
+            width: 1920px;
+            position: absolute;
+            left: 0%;
+            
+            top: 268px;
+            height: 200px;
+            img{
+                position: absolute;
+                left: 27%;
+            }
+        }
+        >ul:not(.links){
+            li{
+               
+                &:nth-child(1){
+                    .img-wrapper{
+                        .icon{
+                            width: 24.8px;
+                        }
+                    }
+                }    
+                &:nth-child(2){
+                    .img-wrapper{
+                        .icon{
+                            width: 27px;
+                        }
+                    }
+                } 
+            }
+        }
+    }
+    @media (max-width:1800px){
+        .section .block .animals{
+            top: 159px;
+        }
+    }
+    @media (max-width:1600px){
+        .section{
+            > ul:not(.links) li{
+                &:nth-child(1) .img-wrapper .icon{
+                    width: 19.8px;
+                }
+            }
+            .block{      
+                .map-wrapper{
+                    
+                    ul.groups li{          
+                        &.group-1{
+                            top: 38%;
+                            .circle-group{                      
+                                .circle{
+                                    width: 200.8px;
+                                }
+                                .item-group{
+                                    width: 192.9px;
+                                    height: 160.2px;
+                                }
+                                .flag{
+                                    left: -30px;
+                                    width: 48px;
+                                } 
+                            }        
+                        }
+                        &.group-2{
+                            top: 50%;
+                            .circle-group{                    
+                                .circle{
+                                    width: 172px;
+                                }
+                                .item-group{
+                                    width: 180px;
+                                }
+                                .flag{
+                                    width: 48px;
+                                    
+                                }
+                            }                   
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:1400px){
+        .section .block{
+            .animals{
+                top: 197px;
+            }
+            .map-wrapper{
+                ul.groups li{
+                    &.group-1{
+                        top: 30%;
+                        left: 12%;
+                    }
+                    &.group-2{
+                        top: 45%;
+                        left: 34%;
+                    }
+          
+                }
+            }
+        }
+    }
+    @media (max-width:1199px){
+        footer{
+            margin-top: 0;
+        }
+        .section .block{
+            .map-wrapper{
+                .animals{
+                    top: 268px;
+                }
+           
+                ul.groups li{
+                    &.group-1{
+                        .circle-group{
+                            .circle{
+                                width: 175.7px;
+                            }
+                            .item-group{
+                                width: 168.77px;
+                            }
+                            .flag{
+                                width: 42px;
+                            }
+                        }
+                    }
+                    &.group-2{
+                        left: 39%;
+                        .circle-group{
+                            .circle{
+                                width: 150.5px;
+                            }
+                            .item-group{
+                                width: 157.5px;
+                            }
+                            .flag{
+                                width: 42px;
+                            }
+                        }
+                    }
+    
+                } 
+             }
+        }
+    }
+    @media (max-width:767px){
+        .dec-section{
+            .bg{
+                background: url(images/environment/3f-bg.jpg) center no-repeat;
+                background-size: cover;
+            }
+            .clouds{
+                .cloud-3{
+                    top: 140px;
+                }
+                .cloud-4{
+                    top: 140px;
+                }
+            } 
+        }
+    }
+    @media (max-width:575px){
+        .section{
+            > ul:not(.links) li{
+                &:nth-child(1) .img-wrapper .icon{
+                    width: 17.05px;
+                }
+                &:nth-child(2) .img-wrapper .icon{
+                    width: 18.56px;
+                }
+            }
+        }
+    }
+}

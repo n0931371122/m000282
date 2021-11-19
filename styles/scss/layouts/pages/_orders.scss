@@ -1,0 +1,180 @@
+#orders{
+    .section{
+        .block{
+            .box{
+                padding: 57px 54px;
+                height: auto;
+                form{
+                    width: 235px;
+                    position: absolute;
+                    top: 40px;
+                    right: 54px;
+                    .select2{
+                        border-radius: 50px;
+                        background: white;
+                        border: 1px solid #174A79;
+                        padding: 10px 20px;
+                        padding-left: 40px;
+                        .select2-selection--single .select2-selection__arrow b{
+                                background: url(images/member/arrow-down.svg) center no-repeat;
+                        }
+                    }
+                }
+                .table-wrapper{
+                    table{
+                        text-align: center;
+                        min-width: 980px;
+                        tbody{
+                            tr{
+                                td{
+                                    &:nth-child(2){
+                                        color:#D70084;
+                                        a{
+                                            text-decoration: underline;
+                                            transition: opacity .3s;
+                                            &:hover{
+                                               opacity: 0.8;
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(6){
+                                        button{
+                                            transition:color .3s ;
+                                            &:hover{
+                                               color:#D70084;
+                                            }
+                                        }
+                                    } 
+                                    &:last-child{
+                                        a{
+                                            &:hover{
+                                                svg{
+                                                    fill:#06C0DC;
+                                                }
+                                            }
+                                            img{
+                                                height: 20px;
+                                            }
+                                            svg{
+                                                width: 26px;
+                                                height: 20px;
+                                                transition:fill .3s ;
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .select2{
+            width: 100% !important;
+        }
+    }
+    .modal{
+        .modal-dialog{
+            .modal-content{
+                border:none;
+                box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
+                border-radius: 25px;
+                .modal-header{
+                    padding: 0;
+                    border-bottom: initial;
+                    button{
+                        position: absolute;
+                        right: -55px;
+                        top: -20px;
+                        color:#7EDEEB;
+                        font-size: 34px;
+                        text-shadow: initial;
+                        opacity: 1;
+                    }
+                }
+                .modal-body{
+                    padding: 45px 52px;
+                    >img{
+                        margin-bottom: 57px;
+                    }
+                    p{
+                        margin-bottom: 3px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    & ~ .select2-container--default .select2-results > .select2-results__options{
+        background: white;
+        border:1px solid #174A79;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    @media (max-width:991px){
+        .section .block .box{
+            padding: 40px 20px;
+            form{
+                top: 25px;
+                right: 20px;
+            }
+        }
+    }
+    @media (max-width:767px){
+        .modal .modal-dialog .modal-content .modal-header button{
+            right: 10px;
+            top: 20px; 
+        }
+    }
+    @media (max-width:575px){
+         .section .block .box{
+            padding: 30px 20px;
+            form{
+               position: static;
+               .select2{
+                   padding: 7.5px 20px;
+                   margin-bottom: 20px;
+                   border-radius: 5px;
+               }
+            }
+            .table-wrapper{
+                table{
+                    min-width: initial;
+                    text-align: left;
+                    tbody{
+                        tr{
+                            td{
+                                display: block;
+                                padding: 3px 0;
+                                &:last-child{
+                                    display: flex;
+                                    align-items: center;
+                                    a{
+                                        display: flex !important;
+                                        margin-left: 3px;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }       
+        .modal .modal-dialog .modal-content .modal-body{
+            padding:30px 20px;
+            > img{
+                margin-bottom: 30px;
+            }
+        }
+        .modal .modal-dialog .modal-content .modal-header button{
+            right: 0px;
+            top: -40px; 
+        }
+         &~ .select2-container--default .select2-results > .select2-results__options{
+             border-radius: 5px;
+         }
+    }
+}

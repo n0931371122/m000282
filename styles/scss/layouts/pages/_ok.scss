@@ -1,0 +1,37 @@
+#ok-mail,
+#ok-mobile{
+    .dec-section{
+        z-index: 1;
+        
+    }
+    .section{
+        .block .box{
+            height: 685px;
+            .btns{
+                a{
+                    margin: 0 10px;
+                }
+            }
+        }
+        .dec{
+            margin-top: -760px;
+        }
+    } 
+    @media (max-width:767px){
+        .section .dec{
+            margin-top: -300px;
+        } 
+    }
+    @media (max-width:575px){
+        .section{
+            .block .box{
+                height: auto;
+                padding: 50px 20px;
+                
+            }
+            .dec{
+                margin-top: 0;
+            }
+        }
+    }
+}

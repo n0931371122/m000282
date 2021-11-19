@@ -1,0 +1,188 @@
+#contact-ok{
+    #header #fix{
+        ul li{
+            a .bg{
+                transform: translateY(-84%);
+            }
+            >div .bg{
+                transform: translateY(-84%);
+            }
+        }
+    }
+    .dec-section{
+        .leafs{
+            position: absolute;
+            top: 110px;
+            .left{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 620px;
+                z-index: 1;
+                transform-origin: 0% 50%;
+                >div:nth-child(1){               
+                    >img{
+                        position: absolute;
+                        mix-blend-mode:multiply ;
+                        &:nth-child(1){
+                            width: 620px; 
+                            left: -325px;
+                        }
+                    }
+                }
+                .dec{
+                    width: 100%;
+                    position: absolute;
+                    top:200px;
+                    .small-leaf{
+                        width: 40px;
+                        position: absolute;
+                        z-index: 1;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+            .right{
+                position: absolute;
+                top: 35px;
+                left: 1410px;
+                width: 620px;
+                z-index: 2;
+                transform-origin: 100% 50%;
+                >div:nth-child(1){               
+                    >img{
+                        
+                        position: absolute;
+                        mix-blend-mode:multiply ;
+                        &:nth-child(1){
+                            width: 620px;
+                            right: -52px;
+                        }
+                    }
+                }
+                .dec{
+                    width: 100%;
+                    position: relative;
+                    top:200px;
+                    .small-leaf{
+                        width: 40px;
+                        position: absolute;
+                        z-index: 1;
+
+                        top: 0;
+                        left: 0;
+                    }
+                    img{
+                        transform: rotateZ(10deg);
+                        position: absolute;
+                    }
+                }
+            }
+        }  
+        .clouds{
+            img{
+                position: absolute;
+                &.cloud-1{
+                    width:7.9%;
+                    top: 905px;
+                    left: -2%;
+                }
+            }
+
+        } 
+        .birds{
+            position: absolute;
+            width: 1920px;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            img{
+                position: absolute;
+                &.bird-1{
+                    left: 347px;
+                    top: 330px;
+                    width: 202px;
+                }             
+            }
+        }
+    }
+    .section{
+        position: relative;
+        padding-bottom: 600px;
+        .block{
+            
+            margin-bottom: -224px;
+            .box{ 
+                border-radius: 25px;
+                width:calc(100% - 40px);
+                max-width: 600px;
+                margin: auto;
+                box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
+                padding: 72px 60px 110px 60px;
+                img{
+                    width: 93px;
+                }
+                a{
+                    width: 180px;
+                    height: 60px;
+                    border-radius: 50px;
+                    transition: opacity .3s;  
+                    border:2px solid #174A79;
+                    color:white;
+                    background: #174A79;  
+                }
+            }
+        }
+    }
+    footer{
+        margin-top: -375px;
+    }
+    @media (max-width:1199px){
+        .section .block .info-box{
+            padding: 0 0px;
+        }
+
+    }
+    @media (max-width:575px){
+        .dec-section .birds img.bird-1{
+            left: 10%;
+            width: 100px;
+            top: 67px;
+        }
+        .section{
+            padding-bottom: 320px;
+            .block{
+                margin-bottom: 0px;
+                .box{
+                    border-radius: 10px;
+                    padding: 50px 20px;
+                    img{
+                        width: 60px;
+                    }
+                    a{
+                        border-radius: 10px;
+                        height: 45px;
+                        width: 120px;
+                    }
+                }
+            }
+            .dec{
+                width: 1100px;
+                bottom: 0;
+                left: 60%;
+            }
+        } 
+        footer{
+            margin-top: -245px;
+        }  
+    }
+}
+
+
+
+
+
+
+
+

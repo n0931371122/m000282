@@ -1,0 +1,127 @@
+#login{
+    .dec-section{
+        .clouds{    
+            .cloud-1{
+                position: absolute;
+                width: 15%;
+                top: 203px;
+                left: 2%;
+            }
+            .cloud-2{
+                position: absolute;
+                width: 8%;
+                top: 150px;
+                left: 23%;    
+            }
+            .cloud-3{
+                position: absolute;
+                width: 15%;
+                top: 190px;
+                left: 75%;
+            } 
+            .cloud-4{
+                position: absolute;
+                width: 12.8%;
+                top: 190px;
+                left: 83%;    
+            }
+        }
+
+    }
+    .section{
+        padding-bottom: 300px;
+        .block{
+            .box{
+                form{
+                    >ul{ 
+                        li{ 
+                            float: left; 
+                            padding: 0 20px;
+                            &:first-child{
+                                position: relative;
+                                &::after{
+                                    content:"";
+                                    display: block;
+                                    height: 15px;
+                                    width: 1px;
+                                    background: #383838;
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 0;
+                                    transform: translateY(-50%);
+                                    opacity: 0.27;
+
+                                }
+                            }
+                            a{
+                                color:#34302D;
+                                font-size: 19px;
+                                transition: color .3s;
+                                &:hover{
+                                    color:#174A79;
+                                }
+                            }
+                        }
+                    }
+
+                    a.fb{
+                        background: url(images/member/fb-btn.png) center no-repeat;
+                        img{ 
+                            width: 24px;
+                        }
+                        span{ 
+                            position: relative;
+                            padding-left: 15px;
+                            margin-left: 10px;
+                            &::after{
+                                content:"";
+                                display: block;
+                                height: 20px;
+                                width: 1px;
+                                background: #D3D3D3;
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                transform: translateY(-50%);
+                                opacity: 0.51; 
+
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+        .dec{
+            margin-top: -700px;
+        }
+    }
+    footer{
+        margin-top: -600px;
+    }
+    @media (max-width:575px){
+
+        .section{
+            padding-bottom: 365px;
+            .block .box form{
+                > ul li{
+                    padding: 0 8px;
+                    a{
+                        font-size: 16px;
+                    }
+                }
+                button[type=submit]{
+                    height: 45px;
+                }
+            } 
+            .dec{
+                margin-top: 0px;
+            }
+            
+        } 
+        footer{
+           margin-top: -290px;
+        }      
+    }
+}

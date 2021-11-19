@@ -1,0 +1,816 @@
+/* ==========================================================================
+	  variables
+==========================================================================*/
+
+var $window = $(window),
+    $header = $("header"),
+    $windowWidth = $window.outerWidth(),
+    $menuVersion;
+
+    if($windowWidth<1200){
+        $menuVersion=true;
+    }
+$(function () {
+    'use strict';
+
+
+	/* ==========================================================================
+		initialize
+	==========================================================================*/
+
+    // plugin
+
+    //aos 
+    $("document").ready(function () {
+        AOS.init({
+            duration: 800,
+            // easing: 'ease-in-out-quad',
+            // default easing for AOS animations
+            offset: 100,
+            mirror: true
+            // whether animation should happen only once - while scrolling down
+
+        });
+    });
+    if ($(window).outerWidth() > 1024) {
+        skrollr.init();
+    }
+
+
+    //mCustomScrollbar
+    if (!/Android/i.test(window.navigator.userAgent)) {
+        $(".scrollbarX").each(function () {
+            $(this).mCustomScrollbar({
+                axis: "x",
+                mouseWheel: { enable: false }
+            });
+        });
+        if($(window).outerWidth()>575){
+            $('.scrollbarY').mCustomScrollbar({
+                axis: "y"
+            });
+        }
+
+
+    }
+    // imgLiquid
+    $('.jqimgFill').imgLiquid();
+    $('.jqimgFill, .main').css("opacity", "1");
+
+    //select2
+    $('.selectpicker').select2();
+    //燈箱
+    $(".lightgallery").lightGallery({
+        fullScreen: false,
+        share: false,
+        actualSize: false,
+        autoplayControls: false
+    });
+
+	/* ==========================================================================
+			文字特效
+	==========================================================================*/
+    $('.tlt').textillate({
+        loop: false,
+        in: {
+            effect: 'fadeInDown',
+            delay: 20,
+            // sync: true
+        },
+    });
+    $('.tlt_slow').textillate({
+        loop: false,
+        initialDelay: 150,
+        in: {
+            effect: 'fadeInUp',
+            delay: 10,
+
+        },
+    });
+    $('.tlt-loop').textillate({
+        loop: true,
+        in: {
+            effect: 'flipInY',
+            delay: 50,
+        },
+        out: {
+            effect: 'fadeOut',
+            delay: 50,
+        },
+    });
+
+
+    //因架構變化，resize trigger reload
+    var wW = $(window).width();
+    var trigger_size = [576, 768, 992, 1200];
+    $(window).resize(function () {
+        trigger_size.forEach(function (ele) {
+            if (wW > ele) {
+                $(window).width() <= ele ? location.reload() : "";
+            } else {
+                $(window).width() > ele ? location.reload() : "";
+            }
+        });
+    });
+
+
+
+
+
+	/* ==========================================================================
+		元件
+    ==========================================================================*/
+
+	/* ==========================================================================
+		pages
+	==========================================================================*/
+    $("#index").each(function(){
+       
+        if(!$menuVersion){
+            menuClose();
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    menuOpen();
+                }
+                else {
+                    menuClose();
+                }
+            });  
+        }
+
+        /* ==========================================================================
+            section-1
+        ==========================================================================*/
+        var $section1=$(".section").eq(0);
+        // flowers
+        var $flower1 = $(".flower-1");
+        var $flower2 = $(".flower-2");
+        var $flower3 = $(".flower-3");
+        gsap.fromTo($flower1, {
+            skewX: -5
+        }, {
+            skewX: 5,
+            repeat: -1,
+            yoyo: true,
+            duration: 2,
+            ease: "power1.inOut"
+        })
+        gsap.fromTo($flower2, {
+            skewX: 0,
+            skewY: 0,
+        }, {
+            skewX: 5,
+            skewY:-3,
+            repeat: -1,
+            yoyo: true,
+            duration: 2,
+            ease: "power1.inOut"
+        }) 
+        gsap.fromTo($flower3, {
+            skewX: 0,
+            skewY:0
+        }, {
+            skewX: -4,
+            skewY: 4,
+            repeat: -1,
+            yoyo: true,
+            duration: 2,
+            ease: "power1.inOut"
+        }) 
+        //clouds
+        var $cloud1 = $(".cloud-1");
+        var $cloud2 = $(".cloud-2");
+        var $cloud3 = $(".cloud-3");
+        gsap.to($cloud1,{
+            x:100,
+            repeat: -1,
+            yoyo: true,
+            duration: 5,
+            ease: "power1.inOut"
+        })
+        gsap.to($cloud2, {
+            x:100,
+            repeat: -1,
+            yoyo: true,
+            duration: 10,
+            ease: "power1.inOut"
+        })
+        gsap.to($cloud3, {
+            x:-100,
+            repeat: -1,
+            yoyo: true,
+            duration: 10,
+            ease: "power1.inOut"
+        })
+
+        //bird
+        var $birdStyle1 = $(".bird-style-1");
+        var $birdStyle1LeftFly = $birdStyle1.find(".left-fly");
+        var $birdStyle1RightFly = $birdStyle1.find(".right-fly");
+        gsap.fromTo($birdStyle1LeftFly,{
+            rotationZ: 5,
+        },{
+            rotationZ:-10,
+            duration:1,
+            repeat:-1,
+            yoyo:true,
+            ease: "power1.inOut"
+        });
+        gsap.fromTo($birdStyle1RightFly, {
+            rotationZ: -5,
+        }, {
+            rotationZ: 10,
+            duration: 1,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
+
+        var $birdStyle2 = $(".bird-style-2");
+        var $birdStyle2LeftFly = $birdStyle2.find(".left-fly");
+        var $birdStyle2RightFly = $birdStyle2.find(".right-fly");
+
+        var $group1=$(".birds").find(".group-1");
+        var grouplTl=gsap.timeline({
+            repeat:-1
+        });
+        grouplTl
+            .from($group1,{
+                x:-500,
+                y:-50,
+                scale:0.3,
+                duration:20,
+                ease:"none"
+            })
+            .to($group1,{
+                x:500,
+                y:-50,
+                duration:20,
+                scale:0,
+                ease: "none"
+            })
+           
+      
+        gsap.fromTo($birdStyle2LeftFly, {
+            rotationZ: 5,
+        }, {
+            rotationZ: -10,
+            duration: 1,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
+        gsap.fromTo($birdStyle2RightFly, {
+            rotationZ: -5,
+        }, {
+            rotationZ: 10,
+            duration: 1,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
+
+
+        //trees
+        var $treesMutiple = $section1.find(".treesMutiple");
+        gsap.fromTo($treesMutiple, {
+            skewX: -2
+        }, {
+            skewX: 2,
+            repeat: -1,
+            yoyo: true,
+            duration: 5,
+            ease: "power1.inOut",
+        })  
+
+        //test
+        gsap.set(".river svg path", {
+            drawSVG: "0% 0%"
+        })
+        gsap.to(".river svg path", {
+            drawSVG: "0% 100%",
+
+            duration: 3
+        })
+
+
+        //bear
+        var $bear = $(".bear");
+        var $bearBody = $bear.find(".bear-body");
+        var $bearEarLeft = $bear.find(".ear-left");
+        var $bearEarRight = $bear.find(".ear-right");
+        gsap.to($bearBody,{
+            scaleY: 1.02,
+            repeat: -1,
+            yoyo: true,
+            duration: 2,
+            ease: "power1.inOut",
+        })
+        gsap.to($bearEarLeft,{
+            skewX: 25,
+            repeat: -1,
+            yoyo: true,
+            duration: 2,
+            ease: "power1.inOut",
+        })
+        gsap.to($bearEarRight, {
+            skewX: 25,
+            repeat: -1,
+            yoyo: true,
+            duration: 2,
+            ease: "power1.inOut",
+        })
+
+        /* ==========================================================================
+            section-2
+        ==========================================================================*/
+        var $section2 = $(".section").eq(1);
+        var $treesMutiple = $section2.find(".treesMutiple");
+        gsap.fromTo($treesMutiple, {
+            skewX: -1
+        }, {
+            skewX: 1,
+            repeat: -1,
+            yoyo: true,
+            duration: 5,
+            ease: "power1.inOut",
+        })  
+        
+        var $leaf = $section2.find(".leaf");
+        var $bird = $section2.find(".bird");
+        gsap.fromTo($leaf, {
+            skewX: 0.5
+        }, {
+            skewX: -0.5,
+            repeat: -1,
+            yoyo: true,
+            duration: 2,
+            ease: "power1.inOut"
+        })
+        gsap.fromTo($bird, {
+            skewY:0.5,
+            skewX: 0.5,
+        }, {
+            skewY: -0.5,
+            skewX: -0.5,
+            repeat: -1,
+            yoyo: true,
+            duration: 2,
+            ease: "power1.inOut"
+        })
+
+
+
+        //leafs
+        var $leafRight=$(".leafs .right img");
+        gsap.to($leafRight,{
+            skewY:1,
+            repeat:-1,
+            yoyo:true,
+            duration:2,
+            ease: "none"
+        })
+
+
+        
+        //butterflies
+        var $butterfliesDiv = $(".butterflies");
+        for(var i=0;i<100;i++){
+            var index = Math.floor(Math.random() * 3)+1;
+            var text = "<div class='butterfly butterfly-" + index + "'>"+
+                            "<img class='left' src='styles/images/index/section-2/butterflies/butterfly-" + index + "/left.svg' alt=''>"+
+                            "<img src='styles/images/index/section-2/butterflies/butterfly-"+index+"/body.svg' alt=''>"+
+                            "<img class='right' src='styles/images/index/section-2/butterflies/butterfly-" + index + "/right.svg' alt=''>"+
+                        "</div>";
+            $butterfliesDiv.append(text);
+        }
+        var r=175,
+            $balloonGroup = $(".balloon-group"),
+            $butterflies = $(".butterflies .butterfly"),
+            $butterflyLeft = $butterflies.find(".left"),
+            $butterflyRight = $butterflies.find(".right"),
+            flyDuration =2;
+
+        var butterflyTl = gsap.timeline({
+             repeat:-1,
+        });
+        butterflyTl    
+            .fromTo($balloonGroup, {
+                x: -300
+            }, {
+                x: 300,
+                duration: 13,
+                ease: "power1.inOut"
+            }) 
+            .fromTo($butterflies, 12, {
+                onStart:function(){
+                    $(this._targets).attr("data-x", (Math.random() * 2000)-1000);
+                    $(this._targets).attr("data-y", (Math.random() * 500));
+                    $(this._targets).attr("data-width", (Math.random() *20)+10);
+                    $(this._targets).attr("data-left", (Math.random()*350));
+                },
+                autoAlpha: 0,
+                width: function () {
+                    return $(this._targets).attr("data-width");
+                },
+                height: function () {
+                    return $(this._targets).attr("data-width");
+                },
+                left: function () {
+                    return $(this._targets).attr("data-left");
+                },
+                top: function () {
+
+                    var y2 = Math.floor(Math.random() * Math.sqrt(Math.pow(r, 2) - Math.pow($(this._targets).attr("data-left")- 175, 2)));
+                    var y = Math.random() > 0.5 ? y2 : - y2;
+                    return y + 175;
+                },
+                x: function(){
+                    return $(this._targets).attr("data-x");
+                },
+                y: function () {
+                    return $(this._targets).attr("data-y");
+                },
+                rotateZ: function () {
+                    var angle = -Math.atan($(this._targets).attr("data-x") / $(this._targets).attr("data-y")) / (Math.PI / 180);
+                    return angle;
+                },
+
+            }, {
+                x: 0,
+                y: 0,
+                autoAlpha: 1,
+                stagger: 0.01,
+                ease: "power2.out",
+                stagger:0.01
+            },0)
+            .to($butterflies, 12,{
+                x: function (index) {
+                    var tx=$butterflies.eq(index).attr("data-x") < 0 ? -$butterflies.eq(index).attr("data-x") : $butterflies.eq(index).attr("data-x");
+                    return tx;
+                },
+                y: function (index) {
+                    return -$butterflies.eq(index).attr("data-y");
+                },
+                 autoAlpha: 0,
+            },20)
+            .fromTo($balloonGroup, {
+                x: 300
+
+            }, {
+                x: -300,
+                duration: 13,
+                ease: "power1.inOut"
+            },13) 
+
+        gsap.to($butterflyLeft, {
+
+            skewY: 20,
+            repeat: -1,
+            yoyo: true,
+            duration: flyDuration,
+            ease: "none"
+        });
+        gsap.from($butterflyRight, {
+
+            skewY: 20,
+            repeat: -1,
+            yoyo: true,
+            duration: flyDuration,
+            ease: "none"
+        });   
+        //balloon
+        gsap.fromTo($balloonGroup, {
+            y: -5
+        }, {
+            y:5,
+            repeat: -1,
+            yoyo: true,
+            duration: 4,
+            ease: "power1.inOut"
+        })
+    });
+
+ 
+
+
+    layout();
+    svg();
+    footer();
+});
+
+gsap.registerPlugin(DrawSVGPlugin,MotionPathPlugin);
+function footer(){
+    var $trees=$("footer .trees");
+    var $fishs=$("footer .fishs");
+    var $treeLeft1 = $trees.find(".tree-left-1");
+    var $treeLeft2 = $trees.find(".tree-left-2");
+    var $treeLeft3 = $trees.find(".tree-left-3");
+    var $treeLeft4 = $trees.find(".tree-left-4");
+    var $treeRight1 = $trees.find(".tree-right-1");
+    var $treeRight2 = $trees.find(".tree-right-2");   
+    var $treeCenter = $trees.find(".tree-center"); 
+    
+    var $fish1 = $fishs.find(".fish-1");
+    var $fish1FlyTop = $fish1.find(".fish-1-fly-top");
+    var $fish1FlyBottom = $fish1.find(".fish-1-fly-bottom");
+    var $fish1Tail = $fish1.find(".fish-1-tail");
+
+    var $fish2 = $fishs.find(".fish-2");
+    var $fish2FlyTop = $fish2.find(".fish-fly-top");
+    var $fish2FlyBottom = $fish2.find(".fish-fly-bottom");
+    var $fish2Tail = $fish1.find(".fish-2-tail");
+    gsap.set($trees.find(".tree-left-3"),{
+       
+    })
+
+
+    gsap.fromTo($treeLeft1, {
+        skewX: 1
+    }, {
+        skewX: -1,
+        repeat: -1,
+        yoyo: true,
+        duration: 2,
+        ease: "power1.inOut"
+    })
+    gsap.fromTo($treeLeft2, {
+        skewX:0.7
+    }, {
+            skewX: -0.7,
+            repeat:-1,
+            yoyo:true,
+            duration:2,
+            ease: "power1.inOut",
+            delay:0.2
+    })
+
+    gsap.fromTo($treeLeft3, {
+        skewX: 0.4
+    }, {
+        skewX: -0.4,
+        repeat: -1,
+        yoyo: true,
+        duration: 2,
+        ease: "power1.inOut",
+        delay: 0.4
+    })
+    gsap.fromTo($treeLeft4, {
+        skewX: 0.8
+    }, {
+        skewX: -0.8,
+        repeat: -1,
+        yoyo: true,
+        duration: 2,
+        ease: "power1.inOut",
+        delay: 0.6
+    })
+    gsap.fromTo($treeRight1, {
+        skewX: 1
+    }, {
+        delay:.3,
+        skewX: -1,
+        repeat: -1,
+        yoyo: true,
+        duration: 2,
+        ease: "power1.inOut"
+    })
+    gsap.fromTo($treeRight2, {
+        skewX: 0.7
+    }, {
+        delay: .5,
+        skewX: -0.7,
+        repeat: -1,
+        yoyo: true,
+        duration: 2,
+        ease: "power1.inOut"
+    }) 
+    gsap.fromTo($treeCenter, {
+        skewX: 1
+    }, {
+        skewX: -1,
+        repeat: -1,
+        yoyo: true,
+        duration: 2,
+        ease: "power1.inOut",
+        delay: 0.5
+    }) 
+
+
+    const tl = gsap.timeline({});
+    const t2 = gsap.timeline({});
+    function restart(){
+        tl.play(0);
+    }
+    function restart2() {
+        t2.play(0);
+    }  
+    tl
+        .to($fish1,12, {
+            repeat: 1,
+            yoyo: true,
+            ease: "power1.inOut",
+            
+            onRepeat:function(){
+                gsap.to($fish1, 1, {
+                    rotationY: "+=180"
+                });
+            },
+            motionPath: {
+                path: "#fish-1-path",
+                align:"#fish-1-path",
+                
+            }
+        })
+        .add(restart)
+        .to($fish1FlyTop,0.5,{
+            skewX:-23,
+            rotationZ:18,
+            top:3,
+
+        },5)
+        .to($fish1FlyBottom, 0.5, {
+            skewX: 20,
+            rotationZ: -6,
+            top:59,
+            left:85
+        }, 5)
+        .to($fish1Tail, 0.5, {
+            rotationZ: 30,
+            left: 228,
+            top:-23,
+            scale:1.1
+        }, 5)
+
+        .to($fish1FlyTop, 0.5, {
+            skewX: 0,
+            rotationZ: 0,
+            top: -10,
+
+        }, 8) 
+        .to($fish1FlyBottom, 0.5, {
+            skewX: 0,
+            rotationZ: 0,
+            top: 65,
+            left: 81
+        }, 8)
+        .to($fish1Tail, 0.5, {
+            rotationZ: 12,
+            left: 217,
+            top: -35,
+            scale: 1
+        }, 8);
+
+    t2
+        .to($fish2, 8, {
+            repeat: 1,
+            yoyo: true,
+            ease: "power1.inOut",
+
+            onRepeat: function () {
+                gsap.to($fish2, 1, {
+                    rotationY: "+=180"
+                });
+            },
+            motionPath: {
+                path: "#fish-2-path",
+                align: "#fish-2-path",
+
+            }
+        })
+        .add(restart2)
+        .to($fish2FlyTop, 0.5, {
+            skewX:40,
+        }, 2)
+        .to($fish2FlyBottom, 0.5, {
+            skewX: -25,
+        }, 2)
+        .to($fish2Tail, 0.5, {
+            skewY: -18,
+        }, 2)
+
+        .to($fish2FlyTop, 0.5, {
+            skewX: 0,
+        }, 5)
+        .to($fish2FlyBottom, 0.5, {
+            skewX: 0,
+        }, 5)
+        .to($fish2Tail, 0.5, {
+            skewY: 0,
+        }, 5)
+        
+        .to($fish2FlyTop, 0.5, {
+            skewX: 40,
+
+        }, 10)
+        .to($fish2FlyBottom, 0.5, {
+            skewX: -25,
+        }, 10)
+        .to($fish2Tail, 0.5, {
+            skewY: -18,
+        }, 10)   
+        
+        .to($fish2FlyTop, 0.5, {
+            skewX: 0,
+        }, 13)
+        .to($fish2FlyBottom, 0.5, {
+            skewX: 0,
+        }, 13)
+        .to($fish2Tail, 0.5, {
+            skewY: 0,
+        }, 13)
+}
+
+
+
+
+
+function layout() {
+    //漢堡條
+    $(".menu-toggle").click(function () {
+        if (!$("header .menu-toggle").hasClass('active')){
+            menuOpen();
+        }
+        else{
+            menuClose();
+        }
+        if($menuVersion){
+            $("html").toggleClass("noscroll");
+        }
+    });
+
+
+
+
+    //goTop
+    $("#goTop").on("click", function () {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+    });
+
+}
+
+function svg() {
+    jQuery('img.svg').each(function () {
+        var $img = jQuery(this);
+        var imgID = $img.attr('id');
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
+
+        jQuery.get(imgURL, function (data) {
+            // Get the SVG tag, ignore the rest   
+            var $svg = jQuery(data).find('svg');
+
+            // Add replaced image's ID to the new SVG   
+            if (typeof imgID !== 'undefined') {
+                $svg = $svg.attr('id', imgID);
+            }
+            // Add replaced image's classes to the new SVG   
+            if (typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass + ' replaced-svg');
+            }
+
+            // Remove any invalid XML tags as per http://validator.w3.org   
+            $svg = $svg.removeAttr('xmlns:a');
+
+            // Check if the viewport is set, if the viewport is not set the SVG wont't scale.   
+            if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+            }
+
+            // Replace image with new SVG   
+            $img.replaceWith($svg);
+
+        }, 'xml');
+
+    });
+}
+
+function uniformHeight($el) {
+    if ($el.length !== 0) {
+        var $h_array = [];
+        $el.each(function (index) {
+            $(this).height("auto");
+            $h_array[index] = $(this).height();
+        });
+        $max = Math.max.apply(null, $h_array);
+        $el.each(function (index) {
+            $(this).height($max);
+        });
+    }
+}
+
+
+function menuOpen() {
+    $("header .menu-toggle").addClass('active');
+    $("header .bg_phone").addClass('active');
+}
+function menuClose() {
+    $("header .menu-toggle").removeClass('active');
+    $("header .bg_phone").removeClass('active');
+}
+
+
+
+
+
+
